@@ -1,47 +1,64 @@
-# Svelte + Vite
+# ReflectI
 
-This template should help get you started developing with Svelte in Vite.
+ReflectI is a privacy-focused, offline-first mental health journaling app designed to help users nurture self-awareness, track mood, and engage with gentle CBT-inspired prompts — all without needing an account or internet connection.
 
-## Recommended IDE Setup
+## Key Aims
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+- **Privacy First:**
+    No accounts, no cloud storage — all data stays encrypted locally on the user’s device. Users fully control their personal journal and mood data.
 
-## Need an official Svelte framework?
+- **Offline-First:**
+    The app works completely without internet, so journaling and mood tracking are always accessible and secure.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+- **Guided Reflection:**
+    Daily CBT-style prompts and exercises encourage healthy mental habits and deeper self-awareness.
 
-## Technical considerations
+- **Mood Tracking:**
+    Easy logging of moods and emotions to help users observe patterns and progress over time.
 
-**Why use this over SvelteKit?**
+- **Voice Journaling (Optional):**
+    Users can record voice entries for a hands-free, natural journaling experience.
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+- **Cross-Platform:**
+    Desktop-first (Windows, macOS, Linux) with plans to expand to mobile platforms, keeping experiences consistent but separate for security.
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+- **User-Centered Design:**
+    Intuitive, calming UI with accessibility and customization in mind, inspired by Solarpunk aesthetics.
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+## Features (Planned)
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+- Create, edit, and delete journal entries
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+- Schedule and receive daily reflective prompts
 
-**Why include `.vscode/extensions.json`?**
+- Log moods with emoji or simple selectors
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+- Encrypt journal data locally (optional toggle)
 
-**Why enable `checkJs` in the JS template?**
+- Export/import journal data securely
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
+- Voice-to-text input and audio journaling
 
-**Why is HMR not preserving my local component state?**
+- Dark mode and customizable themes
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
+## Why ReflectI?
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+ReflectI empowers users to take ownership of their mental well-being through private, intentional self-reflection. By removing barriers like accounts and internet dependency, it offers a safe, gentle space to nurture mental health at one’s own pace.
 
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+## Tech Stack
+
+**Frontend:** Svelte + TailwindCSS
+
+**Backend/Container:** Tauri (Rust + Webview)
+
+**Storage:** SQLite or encrypted JSON files locally
+
+**Voice:** Web Speech API / Native TTS (desktop)
+
+## Getting Started
+
+**Coming soon** — scaffolding and setup instructions.
+
+## Contributing
+
+This is a personal project focused on privacy and accessibility. If you want to contribute or suggest features, feel free to open an issue or PR.
